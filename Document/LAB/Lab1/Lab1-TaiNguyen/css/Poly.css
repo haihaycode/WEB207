@@ -1,0 +1,16 @@
+.poly-cart{
+    margin-top:5px;
+}
+.poly-cart ul{
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+font-variant: small-caps;
+
+}
+.poly-cart .panel-heading strong{
+    font-variant: small-caps;
+    font-size: larger;
+    text-shadow: 0 0 2px darkgray;
+    
+}
