@@ -1,0 +1,18 @@
+.btn-green-shadow {
+    box-shadow: 1px 5px 1px  green;
+}
+.text-Title{
+   color: #1a76c7;
+}
+.text-card{
+    color: #6c757d;
+ }
+
+ .fakeimg {
+    height: 200px;
+    background: #aaa;
+}
+
+body {
+    position: relative;
+}

@@ -1,0 +1,55 @@
+@keyframes slide {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px); /* Adjust the movement distance as per your requirement */
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.animated-logo {
+    animation: slide 2s infinite; /* Adjust the animation duration as per your requirement */
+}
+#typed-text {
+    overflow: hidden;
+    border-right: .15em solid #6c757d; /* Màu và độ dày viền cho hiệu ứng "đánh chữ" */
+    font-size: 24px;
+  }
+  
+
+
+     /* Google chrome */
+      @-webkit-keyframes svg-text-anim {
+       40% {
+          stroke-dashoffset: 0;
+          fill: transparent;
+        }
+        60% {
+          stroke-dashoffset: 0;
+          fill: #f2f3fd;
+        }
+        100% {
+          stroke-dashoffset: 0;
+          fill: #f2f3fd;
+        }
+        
+    }
+    /* Most browsers */
+    @keyframes svg-text-anim {
+       40% {
+          stroke-dashoffset: 0;
+          fill: transparent;
+        }
+        60% {
+          stroke-dashoffset: 0;
+          fill: #f2f3fd;
+        }
+        100% {
+          stroke-dashoffset: 0;
+          fill: #f2f3fd;
+        }
+        
+    }
