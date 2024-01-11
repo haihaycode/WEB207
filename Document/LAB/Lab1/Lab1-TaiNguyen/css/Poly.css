@@ -14,3 +14,10 @@ font-variant: small-caps;
     text-shadow: 0 0 2px darkgray;
     
 }
+article>div>div{
+    transform: scale(0.89);
+}
+*{
+    margin: 0;
+    padding: 0;
+}
