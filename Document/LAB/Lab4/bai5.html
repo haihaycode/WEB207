@@ -46,7 +46,7 @@
             </div>
             <div class="mb-3">
                 <label for="hobby" class="form-label">Học Lực:</label>
-                <div class="alert alert-info">Rớt</div>
+                <div class="alert alert-{{mess}}" ng-bind="grade"></div>
             </div>
             <button type="button" ng-click="submitForm()" class="btn btn-primary">Submit</button>
         </form>
@@ -69,8 +69,16 @@
     <script>
       var app = angular.module("app", []); //khai báo app AngularJs
       app.controller("controller1", function ($scope) {
+        
         $scope.submitForm = function () {
-         
+         var a = parseFloat($scope.score);
+         if(a < 5){
+            $scope.grade="Rớt";
+            $scope.mess="danger";
+         }else{
+            $scope.grade="Đậu";
+            $scope.mess="success";
+         }  
         };
       });
     </script>

@@ -20,26 +20,28 @@
 
   <body ng-app="app">
     <div class="container" ng-controller="controller1">
-        <form >
-            <div class="form-group">
-              <label for="cd">Nhập chiều dài :</label>
-              <input type="number" ng-model="cd" class="form-control" id="cd">
-            </div>
-            <div class="form-group">
-                <label for="cr">Nhập chiều rộng :</label>
-                <input type="number" ng-model="cr" class="form-control" id="cr">
-            </div>
-            <div class="form-group">
-                <label for="cv"> Chu vi :</label>
-                <input type="number" ng-model="cv" class="form-control" id="cv">
-              </div>
-              <div class="form-group">
-                  <label for="dt"> Diện Tích :</label>
-                  <input type="number" ng-model="dt" class="form-control" id="dt">
-              </div>
-             <br>
-            <button type="button" ng-click="calculate()" class="btn btn-light">Submit</button>
-          </form>
+      <form>
+        <div class="form-group">
+          <label for="cd">Nhập chiều dài :</label>
+          <input type="number" ng-model="cd" class="form-control" id="cd" />
+        </div>
+        <div class="form-group">
+          <label for="cr">Nhập chiều rộng :</label>
+          <input type="number" ng-model="cr" class="form-control" id="cr" />
+        </div>
+        <div class="form-group">
+          <label for="cv"> Chu vi :</label>
+          <div class="form-control" ng-bind="cv"></div>
+        </div>
+        <div class="form-group">  
+          <label for="dt"> Diện Tích :</label>  
+          <div class= "form-control" ng-bind="dt"></div>
+        </div>
+        <br />
+        <button type="button" ng-click="calculate()" class="btn btn-lig ht">
+          Submit
+        </button>
+      </form>
     </div>
 
     <!-- Bootstrap JavaScript Libraries -->
@@ -60,11 +62,11 @@
       var app = angular.module("app", []); //khai báo app AngularJs
       app.controller("controller1", function ($scope) {
         $scope.calculate = function () {
-            var a = parseFloat($scope.cd);
-            var b = parseFloat($scope.cr);
-            $scope.cv = 2 * (a + b);
-            $scope.dt = a * b;
-        }
+          var a = parseFloat($scope.cd);
+          var b = parseFloat($scope.cr);
+          $scope.cv = 2 * (a + b);
+          $scope.dt = a * b;
+        };
       });
     </script>
   </body>
