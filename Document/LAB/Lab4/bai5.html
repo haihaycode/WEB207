@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Bài 5</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body ng-app="app">
+    <div class="container" ng-controller="controller1">
+        <form>
+            <div class="mb-3">
+                <label for="fullName" class="form-label">Họ và Tên:</label>
+                <input type="text" ng-model="fullName" class="form-control" id="fullName" required>
+            </div>
+            <div class="mb-3">
+                <label for="dob" class="form-label">Ngày Sinh:</label>
+                <input type="date" ng-model="dob" class="form-control" id="dob" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-check-label">Giới Tính:</label>
+                <div class="form-check">
+                    <input type="radio" ng-model="gender" value="male" class="form-check-input" id="male">
+                    <label for="male" class="form-check-label">Nam</label>
+                </div>
+                <div class="form-check">
+                    <input type="radio" ng-model="gender" value="female" class="form-check-input" id="female">
+                    <label for="female" class="form-check-label">Nữ</label>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="score" class="form-label">Điểm:</label>
+                <input type="number" ng-model="score" class="form-control" id="score" required>
+            </div>
+            <div class="mb-3">
+                <label for="hobby" class="form-label">Học Lực:</label>
+                <div class="alert alert-info">Rớt</div>
+            </div>
+            <button type="button" ng-click="submitForm()" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+
+    <!-- Bootstrap JavaScript Libraries -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/angular.min.js"></script>
+
+    <script>
+      var app = angular.module("app", []); //khai báo app AngularJs
+      app.controller("controller1", function ($scope) {
+        $scope.submitForm = function () {
+         
+        };
+      });
+    </script>
+  </body>
+</html>
